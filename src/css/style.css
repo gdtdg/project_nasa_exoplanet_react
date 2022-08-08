@@ -1,0 +1,477 @@
+body {
+    background: url("../images/background.jpg") no-repeat black top;
+    background-size: 1600px;
+    margin: 0 auto;
+    color: white;
+    overflow-x: hidden;
+}
+
+.page_container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content_wrap {
+    padding-bottom: 220px;
+}
+
+section {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+ul, li {
+    font-family: "Helvetica", serif;
+    font-size: 1.1em;
+}
+
+.navbar_title {
+    font-size: 1em;
+}
+
+.navbar {
+    font-family: "Helvetica", serif;
+}
+
+.navbar-brand {
+    font-size: 2em;
+}
+
+.card {
+    color: white;
+    background-color: #3a3a3a;
+}
+
+.footer {
+    background: url("../images/footer.jpg") repeat;
+    height: 220px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer_links {
+    text-align: center;
+}
+
+.footer_text {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+li {
+    color: black;
+}
+
+#show_exoplanet_display, #result {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.frame {
+    position: relative;
+    background-image: url(../images/starfield_banner.jpg);
+    border-radius: 5px 5px 5px 5px;
+    height: 195px;
+    min-width: 335px;
+    max-width: 24%;
+}
+
+.exoplanet_name {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    height: 47px;
+    padding-top: 6px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    background-color: #3a3a3a;
+}
+
+.exoplanet_center {
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: "Helvetica", serif;
+    border-radius: 8px;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+table tr:nth-child(odd) {
+    background-color: #2b2b2b;
+}
+
+table tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+input {
+    font-family: "Helvetica", serif;
+}
+
+label {
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    padding-top: 12px;
+    height: 40px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+
+.input_box {
+    background-color: #3a3a3a;
+    height: 110px;
+    width: 24%;
+    min-width: 300px;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.range_input {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-control {
+    height: 50px;
+    font-size: 1.2em;
+    width: 95%;
+    margin: 0 auto;
+}
+select {
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 5px 5px 5px 5px;
+}
+
+select :nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.advanced_search_button {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2b2b2b;
+    color: white;
+    font-family: "Helvetica", serif;
+    font-size: 1.4em;
+}
+
+button {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Helvetica", serif;
+    font-size: 1.4em;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+#menu-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex_advanced_search {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.planet_name_search {
+    width: 100%;
+    height: 50px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.planet_name_search::placeholder {
+    font-size: 1.5em;
+}
+
+.planet_index {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 60px -20px rgba(255, 189, 3, 0.72), -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
+    left: 56%;
+    top: 48%;
+    margin: -80px;
+}
+
+.planet_index .mask_index {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+    border-radius: 50%;
+}
+
+.planet_index .background_index {
+    animation: translateBackground 40s infinite linear;
+    background: url(../images/exoplanet_planisphere.jpg) repeat-x;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.planet_index .wrap_index {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+    animation: rotatePlanet 150s infinite linear;
+}
+
+.planet_display {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 60px -20px rgba(255, 189, 3, 0.72), -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
+    left: 48%;
+    top: 44%;
+    margin: -80px;
+}
+
+.planet_display .mask_display {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+    border-radius: 50%;
+}
+
+.planet_display .background_display {
+    animation: translateBackground 40s infinite linear;
+    background: url(../images/exoplanet_planisphere.jpg) repeat-x;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.planet_display .wrap_display {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    animation: rotatePlanet 150s infinite linear;
+}
+
+@keyframes translateBackground {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -600px;
+    }
+}
+
+@keyframes rotatePlanet {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+.exoplanet_display {
+    position: relative;
+    background-image: url(../images/starfield_banner.jpg);
+    border-radius: 5px 5px 5px 5px;
+    width: 1150px;
+    height: 600px;
+    min-width: 1150px;
+    animation: translateBackground 40s infinite linear;
+}
+
+.line_planet_status {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 205px;
+    transform: rotate(45deg);
+    top: 25%;
+    left: 24%
+}
+
+.planet_status_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 10%;
+    left: 2%;
+}
+
+
+.line_mass {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 136px;
+    transform: rotate(18deg);
+    top: 35%;
+    left: 26.5%
+}
+
+.mass_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 27%;
+    left: 2%;
+}
+
+.line_planet_type {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 136px;
+    transform: rotate(-18deg);
+    top: 43%;
+    left: 26.5%
+}
+
+.planet_type_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 45%;
+    left: 2%;
+}
+
+.line_eccentricity {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 200px;
+    transform: rotate(-45deg);
+    top: 53%;
+    left: 24%
+}
+
+.eccentricity_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 62%;
+    left: 2%;
+}
+
+.line_discovery_date {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 200px;
+    transform: rotate(-225deg);
+    top: 4%;
+    left: 57%;
+
+}
+
+.discovery_date_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: -11%;
+    left: 73%;
+}
+
+.line_planet_radius {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 133px;
+    transform: rotate(-18deg);
+    top: 13%;
+    left: 60.4%
+}
+
+.planet_radius_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 4%;
+    left: 73.2%;
+}
+
+.line_orbital_period {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 133px;
+    transform: rotate(18deg);
+    top: 20%;
+    left: 60.4%
+}
+
+.orbital_period_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 20%;
+    left: 73.4%;
+}
+
+.line_discovery_method {
+    position: relative;
+    height: 1px;
+    background: white;
+    width: 198px;
+    transform: rotate(45deg);
+    top: 28%;
+    left: 57%
+}
+
+.discovery_method_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    font-size: 1.2em;
+    top: 35%;
+    left: 73%;
+}
+
+.light_year_display {
+    position: relative;
+    font-family: "Helvetica", serif;
+    top: -45%;
+    left: 38%;
+}
+
+.popover {
+    color: black;
+    width: 24%;
+    min-width: 300px;
+    font-size: 1.1em;
+}
